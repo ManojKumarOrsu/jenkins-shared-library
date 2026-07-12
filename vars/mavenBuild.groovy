@@ -1,4 +1,8 @@
 def call() {
-    echo "Building Maven project..."
-    sh "mvn clean package"
+    stage ('Build using shared library') {
+        steps {
+            echo 'running maven build from shared library...'
+            sh 'mvn clean package'
+        }
+    }
 }
