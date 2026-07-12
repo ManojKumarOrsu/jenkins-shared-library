@@ -1,4 +1,4 @@
-@Library (my-shared-lib) _
+@Library ('my-shared-lib') _
 
 pipeline {
     agent any
@@ -17,9 +17,9 @@ pipeline {
                 mavenBuild ()
             }
         }
-        stage (post_build) {
+        stage ('post_build') {
             steps {
-                echo 'Build usinig shared library succesfull'
+                echo 'Build using shared library succesfull'
             }
         }
     }
